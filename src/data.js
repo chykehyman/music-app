@@ -73,4 +73,26 @@ export default {
       img: require('./assets/s5.jpeg'),
     },
   ],
+  profile: [
+    {
+      icon: 'music',
+      name: 'Songs',
+      count: 20,
+    },
+    {
+      icon: 'playlist-music',
+      name: 'Playlist',
+      count: 25,
+    },
+    {
+      icon: 'album',
+      name: 'Albums',
+      count: 20,
+    },
+    {
+      icon: 'download',
+      name: 'Downloads',
+      count: 20,
+    },
+  ],
 };

@@ -53,10 +53,11 @@ const styles = StyleSheet.create({
   container: {
     width,
     height: 230,
-    marginTop: 15,
+    marginTop: 10,
+    marginBottom: -20,
   },
   title: {
-    fontSize: 24,
+    fontSize: 18,
     fontWeight: 'bold',
     color: '#000',
     margin: 10,
