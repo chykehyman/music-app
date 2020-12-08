@@ -1,10 +1,20 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import {
+  BannerComponent,
+  CategoriesComponent,
+  SongsComponent,
+} from '../components';
 
-const Home = () => {
+const Home = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Music App</Text>
+      <ScrollView>
+        <BannerComponent navigation={navigation} />
+        <CategoriesComponent navigation={navigation} />
+        <SongsComponent navigation={navigation} name="Songs" />
+      </ScrollView>
     </View>
   );
 };

@@ -11,7 +11,7 @@ const Splash = ({ navigation }) => {
       <TouchableOpacity style={styles.btn} onPress={goToTabs}>
         <Text style={styles.text}>Start Listening</Text>
       </TouchableOpacity>
-      <StatusBar hidden />
+      <StatusBar barStyle="dark-content" backgroundColor={'black'} />
     </View>
   );
 };
