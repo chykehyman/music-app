@@ -59,7 +59,7 @@ export default SongsModalComponent;
 
 const styles = StyleSheet.create({
   modal: {
-    height: '55%',
+    height: '60%',
     width: '100%',
     backgroundColor: '#fff',
     position: 'absolute',

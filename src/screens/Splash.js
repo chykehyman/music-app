@@ -1,13 +1,29 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
+import * as Animatable from 'react-native-animatable';
 
 const Splash = ({ navigation }) => {
   const goToTabs = () => navigation.navigate('Tabs');
+  const zoomIn = {
+    0: {
+      scale: 0,
+    },
+    0.5: {
+      scale: 0.5,
+    },
+    1: {
+      scale: 1,
+    },
+  };
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Music App</Text>
-      <Image source={require('../assets/logo.png')} style={styles.logo} />
+      <Animatable.Image
+        source={require('../assets/logo.png')}
+        style={styles.logo}
+        animation={zoomIn}
+      />
       <TouchableOpacity style={styles.btn} onPress={goToTabs}>
         <Text style={styles.text}>Start Listening</Text>
       </TouchableOpacity>

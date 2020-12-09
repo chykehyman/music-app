@@ -22,15 +22,11 @@ const SongDataComponent = ({ item, navigation }) => {
   };
 
   const openModal = () => {
-    setModalVisible({
-      modalVisible: true,
-    });
+    setModalVisible(true);
   };
 
   const closeModal = () => {
-    setModalVisible({
-      modalVisible: false,
-    });
+    setModalVisible(false);
   };
   return (
     <View>

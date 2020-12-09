@@ -5,6 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import { Home, Discover, Profile, Splash, Player } from '../screens';
 import { StatusBar, View } from 'react-native';
+import CategoriesDetails from '../components/categories/CategoriesDetails';
 
 const Tab = createBottomTabNavigator();
 
@@ -92,6 +93,13 @@ const Stacks = () => {
       <Stack.Screen
         name="Player"
         component={Player}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="Details"
+        component={CategoriesDetails}
         options={{
           headerShown: false,
         }}
