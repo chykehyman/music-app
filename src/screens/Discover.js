@@ -6,7 +6,6 @@ import {
   TextInput,
   View,
   TouchableOpacity,
-  StatusBar,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { CategoriesComponent, SongsComponent } from '../components';

@@ -3,14 +3,15 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import { Home, Discover, Profile, Splash } from '../screens';
-import { StatusBar } from 'react-native';
+import { Home, Discover, Profile, Splash, Player } from '../screens';
+import { StatusBar, View } from 'react-native';
 
 const Tab = createBottomTabNavigator();
 
 const Tabs = () => {
   return (
     <>
+      <View style={{ paddingTop: Platform.OS === 'android' ? 20 : 0 }} />
       <Tab.Navigator
         initialRouteName="Home"
         tabBarOptions={{
@@ -64,7 +65,7 @@ const Tabs = () => {
           }}
         />
       </Tab.Navigator>
-      <StatusBar barStyle="dark-content" backgroundColor={'transparent'} />
+      <StatusBar barStyle="dark-content" backgroundColor={'#fff'} />
     </>
   );
 };
@@ -84,6 +85,13 @@ const Stacks = () => {
       <Stack.Screen
         name="Tabs"
         component={Tabs}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="Player"
+        component={Player}
         options={{
           headerShown: false,
         }}
